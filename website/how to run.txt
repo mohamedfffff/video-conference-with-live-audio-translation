@@ -1,0 +1,4 @@
+//how to start the server
+open new terminal
+npm start
+go to local host 8000
