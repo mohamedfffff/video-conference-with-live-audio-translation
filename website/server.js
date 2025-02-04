@@ -11,6 +11,8 @@ const peerServer = ExpressPeerServer(server, {
 
 
 app.use('/css', express.static(path.join(__dirname, 'assets', 'css')));  //setting up static path
+app.use('/images', express.static(path.join(__dirname, 'assets', 'images')));  //setting up static path
+app.use('/js', express.static(path.join(__dirname, 'assets', 'js')));  //setting up static path
 app.set('view engine', 'ejs'); //setting up view engine
   
 app.set('views', path.join(__dirname, 'views'));  
