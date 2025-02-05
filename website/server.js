@@ -4,12 +4,13 @@ const server = require('http').Server(app); //creting http server
 const io = require('socket.io')(server); //socket runs on this server
 const { ExpressPeerServer } = require('peer'); //WebRTC api for real time media communication
 const path = require('path');
+const cors = require('cors');
 
 const peerServer = ExpressPeerServer(server, {
     debug: true
 });
 
-
+app.use(cors());
 app.use('/css', express.static(path.join(__dirname, 'assets', 'css')));  //setting up static path
 app.use('/images', express.static(path.join(__dirname, 'assets', 'images')));  //setting up static path
 app.use('/js', express.static(path.join(__dirname, 'assets', 'js')));  //setting up static path
