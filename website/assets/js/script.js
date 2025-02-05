@@ -1,6 +1,6 @@
-const socket = io();
+const socket = io('https://video-conference-with-live-audio-translation.vercel.app/');
 const videoGrid = document.getElementById('video-grid'); //div where our video will be loaded
- 
+  
 //setup
 var myPeer = new Peer();
 let count = 0;
